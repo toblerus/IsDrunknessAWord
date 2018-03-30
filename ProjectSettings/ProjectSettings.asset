@@ -629,11 +629,13 @@ PlayerSettings:
     daydream:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 1
+    UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 683cdfe3-cb68-496a-82bc-8d4655d771cd
-  projectName: IsDrunknessAWord
+  projectName: Is Drunkness A Word?
   organizationId: creativeimpulse
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
