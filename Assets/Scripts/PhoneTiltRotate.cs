@@ -13,7 +13,8 @@ public class PhoneTiltRotate : MonoBehaviour {
 	void Update(){
 		zRotation += -Input.gyro.rotationRateUnbiased.z;
 
-		transform.eulerAngles = new Vector3(0, 0, zRotation);
+		transform.eulerAngles = new Vector3(0, -90, zRotation);
+
 	}
 	
 }
