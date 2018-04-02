@@ -5,19 +5,15 @@ using UnityEngine;
 
 public class PhoneTiltRotate : MonoBehaviour {
 
-		// Use this for initialization
-		void Start () {
+	float zRotation;
+	void Start(){
+		Input.gyro.enabled = false;
+		Input.gyro.enabled = true;
+	}
+	void Update(){
+		zRotation += -Input.gyro.rotationRateUnbiased.z;
 
-			if(!Input.gyro.enabled)
-			{
-				Input.gyro.enabled = true;
-			}
-		}
-
-		// Update is called once per frame
-		void Update () 
-		{
-			transform.rotation  = Input.gyro.attitude;
-		}
+		transform.eulerAngles = new Vector3(0, 0, zRotation);
+	}
 	
 }
