@@ -13,6 +13,7 @@ public class AlcoholSpawn : MonoBehaviour {
 		frames++;
 		if (frames % 20 == 0) {
 			Instantiate(spawnee, spawnPos.position, spawnPos.rotation);
+			frames = 0;
 		}
 	}
 }
