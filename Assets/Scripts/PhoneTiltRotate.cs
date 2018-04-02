@@ -1,20 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PhoneTiltRotate : MonoBehaviour {
 
-	float xRotation;
+	float zRotation;
+	private int rotationValue;
+	public Text Text;
+
 	void Start(){
 		Input.gyro.enabled = false;
 		Input.gyro.enabled = true;
 	}
 	void Update(){
-		xRotation += -Input.gyro.rotationRateUnbiased.x;
-
-		transform.eulerAngles = new Vector3(0, -90, xRotation);
-
+		zRotation += -Input.gyro.rotationRateUnbiased.z;
+		transform.eulerAngles = new Vector3(zRotation, -90, 0);
+		rotationValue = (int)zRotation;
+		Text.text = rotationValue.ToString ();
 	}
 	
 }
