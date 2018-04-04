@@ -27,7 +27,7 @@ public class PhoneTiltRotate : MonoBehaviour {
 
 		if (zRotation <= 0) 
 		{
-			transform.eulerAngles = new Vector3((zRotation * 1), -90, 0);
+			transform.eulerAngles = new Vector3((zRotation * -1), -90, 0);
 			rotationValue = (int)zRotation;
 			Text.text = rotationValue.ToString ();
 		}
