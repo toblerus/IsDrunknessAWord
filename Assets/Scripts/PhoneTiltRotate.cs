@@ -8,7 +8,7 @@ public class PhoneTiltRotate : MonoBehaviour {
 
 	float zRotation;
 	private int rotationValue;
-	public Text Text;
+	public Text zRotationValueDisp;
 
 	void Start(){
 		Input.gyro.enabled = false;
@@ -22,14 +22,14 @@ public class PhoneTiltRotate : MonoBehaviour {
 		{
 			transform.eulerAngles = new Vector3((zRotation - (2*zRotation)), -90, 0);
 			rotationValue = (int)zRotation;
-			Text.text = rotationValue.ToString ();
+			zRotationValueDisp.text = rotationValue.ToString ();
 		}
 
 		if (zRotation <= 0) 
 		{
 			transform.eulerAngles = new Vector3((zRotation * -1), -90, 0);
 			rotationValue = (int)zRotation;
-			Text.text = rotationValue.ToString ();
+			zRotationValueDisp.text = rotationValue.ToString ();
 		}
 	}
 	
