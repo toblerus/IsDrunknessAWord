@@ -13,9 +13,10 @@ public class PhoneTiltRotate : MonoBehaviour {
 	void Start(){
 		Input.gyro.enabled = false;
 		Input.gyro.enabled = true;
+
 	}
 	void Update(){
-		zRotation += -Input.gyro.rotationRateUnbiased.z;
+		zRotation += -Input.acceleration.z;
 
 
 		if (zRotation >= 0) 
